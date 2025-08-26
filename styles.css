@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset general */
 * {
   margin: 0;
   padding: 0;
@@ -11,13 +11,19 @@ body {
   color: #e0d5ff;
   line-height: 1.7;
   overflow-x: hidden;
-  animation: backgroundPulse 10s ease infinite;
+  animation: backgroundPulse 10s ease infinite alternate;
 }
 
 @keyframes backgroundPulse {
   0% { background-color: #0d091c; }
   50% { background-color: #140b2a; }
   100% { background-color: #0d091c; }
+}
+
+/* Tipos de letra */
+h1, h2, h3 {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
 }
 
 /* Hero Section */
@@ -29,7 +35,7 @@ body {
     radial-gradient(circle at 80% 70%, rgba(157, 78, 221, 0.3) 0%, transparent 30%),
     linear-gradient(135deg, #5a189a 0%, #240046 50%, #10002b 100%);
   background-size: 400% 400%;
-  animation: gradientPulse 15s ease infinite;
+  animation: gradientShift 15s ease infinite;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,7 +44,7 @@ body {
   overflow: hidden;
 }
 
-@keyframes gradientPulse {
+@keyframes gradientShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
@@ -49,25 +55,32 @@ body {
   max-width: 800px;
   padding: 2rem;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(30px);
   animation: fadeInUp 1.5s forwards;
 }
 
+/* Logo animado */
 .logo-text {
   font-size: 3.8rem;
   margin-bottom: 1rem;
   font-weight: 700;
+  letter-spacing: 1px;
   background: linear-gradient(90deg, #e0aaff, #9d4edd, #5a189a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 15px rgba(187, 119, 255, 0.4);
-  letter-spacing: 1px;
   animation: neonGlow 3s ease-in-out infinite alternate;
+  position: relative;
+  display: inline-block;
 }
 
 @keyframes neonGlow {
-  0% { text-shadow: 0 0 10px rgba(187, 119, 255, 0.8); }
-  100% { text-shadow: 0 0 20px rgba(187, 119, 255, 1), 0 0 30px rgba(157, 78, 221, 0.4); }
+  0% {
+    text-shadow: 0 0 10px rgba(187, 119, 255, 0.8), 0 0 20px rgba(157, 78, 221, 0.4);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(187, 119, 255, 1), 0 0 30px rgba(157, 78, 221, 0.6);
+  }
 }
 
 .tagline {
@@ -75,8 +88,9 @@ body {
   color: #d8b5ff;
   margin: 1.5rem 0;
   font-weight: 300;
+  letter-spacing: 0.5px;
   opacity: 0;
-  animation: fadeInTagline 1.5s forwards;
+  animation: fadeInTagline 1s forwards;
   animation-delay: 0.8s;
 }
 
@@ -84,7 +98,7 @@ body {
   to { opacity: 1; }
 }
 
-/* Botón de descarga animado */
+/* Botón de descarga principal */
 .btn-primary {
   display: inline-block;
   background: linear-gradient(45deg, #9d4edd, #e0aaff);
@@ -99,14 +113,17 @@ body {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  margin-top: 1rem;
 }
 
 .btn-primary::before {
   content: '';
   position: absolute;
-  top: 0; left: -100%;
-  width: 100%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
   transition: none;
   animation: shine 2s infinite;
 }
@@ -120,18 +137,24 @@ body {
   box-shadow: 0 10px 30px rgba(157, 78, 221, 0.7);
 }
 
+/* Barra de progreso de descarga */
 .progress-container {
   margin-top: 1rem;
   opacity: 0;
-  animation: fadeIn 0.5s forwards;
+  transition: opacity 0.3s ease;
+}
+
+.progress-container.show {
+  opacity: 1;
 }
 
 .progress-bar {
   width: 100%;
   height: 6px;
-  background: #333;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 3px;
   overflow: hidden;
+  box-shadow: 0 0 5px rgba(157, 78, 221, 0.2);
 }
 
 .progress-fill {
@@ -140,18 +163,28 @@ body {
   background: #e0aaff;
   border-radius: 3px;
   transition: width 0.2s linear;
+  box-shadow: 0 0 10px rgba(224, 170, 255, 0.4);
 }
 
 .progress-text {
   color: #e0aaff;
-  font-size: 0.9rem;
-  margin-top: 0.3rem;
+  font-size: 0.95rem;
+  margin-top: 0.4rem;
+  font-weight: 500;
 }
 
 /* Features */
 .features {
   padding: 6rem 2rem;
   background: #120b2c;
+}
+
+.features h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(90deg, #e0aaff, #9d4edd, #5a189a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .features-grid {
@@ -166,7 +199,7 @@ body {
   background: rgba(90, 24, 154, 0.1);
   padding: 2.2rem;
   border-radius: 18px;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(10px);
   border: 1px solid rgba(157, 78, 221, 0.25);
   transition: all 0.35s ease;
   text-align: center;
@@ -178,10 +211,234 @@ body {
   font-size: 2.6rem;
   color: #e0aaff;
   margin-bottom: 1rem;
+  transition: transform 0.3s ease;
 }
 
-/* Screenshots, Comparison, Download, etc. (igual que antes) */
-/* Puedes copiar el CSS del ejemplo anterior para estas secciones */
+.feature-card:hover i {
+  transform: scale(1.1);
+}
+
+.feature-card h3 {
+  color: #ffffff;
+}
+
+.feature-card p {
+  color: #c5b6e0;
+  font-size: 0.95rem;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px rgba(157, 78, 221, 0.2);
+  border-color: rgba(187, 119, 255, 0.4);
+}
+
+/* Screenshots */
+.screenshots {
+  padding: 6rem 2rem;
+  background: #0d091c;
+  text-align: center;
+}
+
+.screenshots h2 {
+  margin-bottom: 3rem;
+  background: linear-gradient(90deg, #e0aaff, #9d4edd, #5a189a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.8rem;
+  margin-top: 2rem;
+}
+
+.gallery img {
+  border-radius: 14px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+  max-width: 48%;
+  height: auto;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(157, 78, 221, 0.3);
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.gallery img.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 16px 40px rgba(157, 78, 221, 0.4);
+}
+
+/* Comparison */
+.comparison {
+  padding: 6rem 2rem;
+  background: #150c34;
+  text-align: center;
+}
+
+.comparison h2 {
+  margin-bottom: 3rem;
+  background: linear-gradient(90deg, #e0aaff, #9d4edd, #5a189a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.compare-table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: rgba(90, 24, 154, 0.15);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(157, 78, 221, 0.2);
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 1.1rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.compare-table th {
+  background: linear-gradient(to right, #5a189a, #9d4edd);
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.compare-table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.compare-table tr:hover {
+  background: rgba(157, 78, 221, 0.1);
+}
+
+/* Download Section */
+.download {
+  padding: 6rem 2rem;
+  text-align: center;
+  background: #1a083f;
+}
+
+.download h2 {
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #e0aaff, #9d4edd, #5a189a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.download p {
+  font-size: 1.25rem;
+  margin-bottom: 1.6rem;
+  color: #d8b5ff;
+}
+
+.btn-download {
+  display: inline-block;
+  background: linear-gradient(45deg, #9d4edd, #5a189a);
+  color: white;
+  font-size: 1.35rem;
+  font-weight: 700;
+  padding: 1.3rem 3.2rem;
+  border-radius: 60px;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(157, 78, 221, 0.6);
+  transition: all 0.35s ease;
+  margin: 1rem 0;
+}
+
+.btn-download:hover {
+  transform: scale(1.05);
+  box-shadow: 0 14px 40px rgba(157, 78, 221, 0.8);
+}
+
+.install-guide a {
+  color: #e0aaff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+}
+
+.install-guide a:hover {
+  color: #9d4edd;
+  text-decoration: underline;
+}
+
+/* Community */
+.community {
+  padding: 6rem 2rem;
+  background: #0d091c;
+  text-align: center;
+}
+
+.community h2 {
+  margin-bottom: 2.5rem;
+  background: linear-gradient(90deg, #e0aaff, #9d4edd, #5a189a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.links a {
+  color: #e0aaff;
+  font-size: 1.25rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.links a.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.links a:hover {
+  color: #9d4edd;
+  transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+  background: #100525;
+  color: #a090c7;
+  text-align: center;
+  padding: 2.2rem;
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(157, 78, 221, 0.2);
+}
+
+footer p {
+  margin: 0.6rem 0;
+}
 
 /* Animaciones generales */
 @keyframes fadeInUp {
@@ -195,13 +452,34 @@ body {
   to { opacity: 1; }
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
   .logo-text {
     font-size: 2.8rem;
   }
 
   .hero-content {
-    padding: 1rem;
+    padding: 1.5rem;
+  }
+
+  .gallery img {
+    max-width: 100%;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .btn-primary,
+  .btn-download {
+    padding: 1rem 2.2rem;
+    font-size: 1.1rem;
   }
 }
