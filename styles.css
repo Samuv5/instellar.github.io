@@ -1,10 +1,11 @@
-/* Reset general */
+/* Reset básico para evitar estilos por defecto */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Cuerpo de la página */
 body {
   font-family: 'Exo 2', sans-serif;
   background: #0d091c;
@@ -14,19 +15,20 @@ body {
   animation: backgroundPulse 10s ease infinite alternate;
 }
 
+/* Animación de fondo suave */
 @keyframes backgroundPulse {
   0% { background-color: #0d091c; }
   50% { background-color: #140b2a; }
   100% { background-color: #0d091c; }
 }
 
-/* Tipos de letra */
+/* Tipos de encabezado */
 h1, h2, h3 {
   font-family: 'Exo 2', sans-serif;
   font-weight: 700;
 }
 
-/* Hero Section */
+/* Sección Hero */
 .hero {
   height: 100vh;
   background: radial-gradient(ellipse at center, #1a083f 0%, #0d091c 70%);
@@ -98,7 +100,7 @@ h1, h2, h3 {
   to { opacity: 1; }
 }
 
-/* Botón de descarga principal */
+/* Botón principal */
 .btn-primary {
   display: inline-block;
   background: linear-gradient(45deg, #9d4edd, #e0aaff);
@@ -124,7 +126,6 @@ h1, h2, h3 {
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  transition: none;
   animation: shine 2s infinite;
 }
 
@@ -144,7 +145,8 @@ h1, h2, h3 {
   transition: opacity 0.3s ease;
 }
 
-.progress-container.show {
+.progress-container.show,
+.progress-container[style*="display: block"] {
   opacity: 1;
 }
 
@@ -173,7 +175,7 @@ h1, h2, h3 {
   font-weight: 500;
 }
 
-/* Features */
+/* Sección de características */
 .features {
   padding: 6rem 2rem;
   background: #120b2c;
@@ -182,6 +184,7 @@ h1, h2, h3 {
 .features h2 {
   text-align: center;
   margin-bottom: 3rem;
+  font-size: 2.6rem;
   background: linear-gradient(90deg, #e0aaff, #9d4edd, #5a189a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -220,6 +223,7 @@ h1, h2, h3 {
 
 .feature-card h3 {
   color: #ffffff;
+  margin-bottom: 0.8rem;
 }
 
 .feature-card p {
@@ -233,7 +237,7 @@ h1, h2, h3 {
   border-color: rgba(187, 119, 255, 0.4);
 }
 
-/* Screenshots */
+/* Sección de capturas */
 .screenshots {
   padding: 6rem 2rem;
   background: #0d091c;
@@ -242,6 +246,7 @@ h1, h2, h3 {
 
 .screenshots h2 {
   margin-bottom: 3rem;
+  font-size: 2.6rem;
   background: linear-gradient(90deg, #e0aaff, #9d4edd, #5a189a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -266,7 +271,8 @@ h1, h2, h3 {
   transform: translateY(20px);
 }
 
-.gallery img.loaded {
+.gallery img.loaded,
+.gallery img {
   opacity: 1;
   transform: translateY(0);
 }
@@ -276,7 +282,7 @@ h1, h2, h3 {
   box-shadow: 0 16px 40px rgba(157, 78, 221, 0.4);
 }
 
-/* Comparison */
+/* Sección de comparación */
 .comparison {
   padding: 6rem 2rem;
   background: #150c34;
@@ -285,6 +291,7 @@ h1, h2, h3 {
 
 .comparison h2 {
   margin-bottom: 3rem;
+  font-size: 2.6rem;
   background: linear-gradient(90deg, #e0aaff, #9d4edd, #5a189a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -302,6 +309,8 @@ h1, h2, h3 {
   border: 1px solid rgba(157, 78, 221, 0.2);
   opacity: 0;
   transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.5s;
 }
 
 .compare-table th,
@@ -327,7 +336,7 @@ h1, h2, h3 {
   background: rgba(157, 78, 221, 0.1);
 }
 
-/* Download Section */
+/* Sección de descarga */
 .download {
   padding: 6rem 2rem;
   text-align: center;
@@ -336,6 +345,7 @@ h1, h2, h3 {
 
 .download h2 {
   margin-bottom: 1.5rem;
+  font-size: 2.6rem;
   background: linear-gradient(90deg, #e0aaff, #9d4edd, #5a189a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -381,7 +391,7 @@ h1, h2, h3 {
   text-decoration: underline;
 }
 
-/* Community */
+/* Sección de comunidad */
 .community {
   padding: 6rem 2rem;
   background: #0d091c;
@@ -390,6 +400,7 @@ h1, h2, h3 {
 
 .community h2 {
   margin-bottom: 2.5rem;
+  font-size: 2.6rem;
   background: linear-gradient(90deg, #e0aaff, #9d4edd, #5a189a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -416,7 +427,8 @@ h1, h2, h3 {
   transform: translateY(20px);
 }
 
-.links a.show {
+.links a.show,
+.links a {
   opacity: 1;
   transform: translateY(0);
 }
@@ -448,10 +460,6 @@ footer p {
   }
 }
 
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .logo-text {
@@ -481,5 +489,14 @@ footer p {
   .btn-download {
     padding: 1rem 2.2rem;
     font-size: 1.1rem;
+  }
+
+  .compare-table {
+    font-size: 0.9rem;
+  }
+
+  .compare-table th,
+  .compare-table td {
+    padding: 0.8rem 0.5rem;
   }
 }
