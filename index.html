@@ -10,47 +10,46 @@
 </head>
 <body>
 
-  <!-- Hero -->
+  <!-- Fondo de estrellas animado -->
+  <div class="stars"></div>
+  <div class="stars2"></div>
+  <div class="stars3"></div>
+
+  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <h1 class="logo-text">Instellar OS</h1>
       <p class="tagline">Beyond Performance, Beyond Simplicity</p>
-      <button id="downloadBtn" class="btn-primary">Download Now</button>
-      <div id="progressContainer" class="progress-container" style="display:none;">
-        <div class="progress-bar">
-          <div class="progress-fill" id="progressFill"></div>
-        </div>
-        <p class="progress-text">Downloading... <span id="progressPercent">0</span>%</p>
-      </div>
+      <a href="#download" class="btn-primary pulse-glow">Download Now</a>
     </div>
   </section>
 
   <!-- Features -->
   <section class="features">
-    <h2>Core Features</h2>
+    <h2 class="section-title">Core Features</h2>
     <div class="features-grid">
-      <div class="feature-card">
-        <i class="fas fa-bolt"></i>
+      <div class="feature-card float-in">
+        <i class="fas fa-bolt glow-icon"></i>
         <h3>Extreme Performance</h3>
         <p>Optimized for any PC — from legacy hardware to cutting-edge rigs.</p>
       </div>
-      <div class="feature-card">
-        <i class="fas fa-palette"></i>
+      <div class="feature-card float-in" style="--delay: 0.2s;">
+        <i class="fas fa-palette glow-icon"></i>
         <h3>Minimal Cosmic Aesthetic</h3>
         <p>Dark themes with deep purples, subtle glows, and elegant UI design.</p>
       </div>
-      <div class="feature-card">
-        <i class="fas fa-satellite"></i>
+      <div class="feature-card float-in" style="--delay: 0.4s;">
+        <i class="fas fa-satellite glow-icon"></i>
         <h3>Arch-Based & Rolling</h3>
         <p>Built on Arch Linux: always up-to-date, zero bloat, full control.</p>
       </div>
-      <div class="feature-card">
-        <i class="fas fa-wrench"></i>
+      <div class="feature-card float-in" style="--delay: 0.6s;">
+        <i class="fas fa-wrench glow-icon"></i>
         <h3>Full Customization</h3>
         <p>Lightweight XFCE, deeply customizable with cosmic-inspired themes.</p>
       </div>
-      <div class="feature-card">
-        <i class="fas fa-globe"></i>
+      <div class="feature-card float-in" style="--delay: 0.8s;">
+        <i class="fas fa-globe glow-icon"></i>
         <h3>Seamless Connectivity</h3>
         <p>Built-in tools for networking, Bluetooth, and fast internet setup.</p>
       </div>
@@ -59,19 +58,19 @@
 
   <!-- Screenshots -->
   <section class="screenshots">
-    <h2>Screenshots</h2>
+    <h2 class="section-title">Screenshots</h2>
     <div class="gallery">
-      <img src="https://via.placeholder.com/800x450/14102a/e0aaff?text=Instellar+Desktop" alt="XFCE Desktop" />
-      <img src="https://via.placeholder.com/800x450/14102a/bc57ff?text=Alacritty+Terminal" alt="Alacritty Terminal" />
-      <img src="https://via.placeholder.com/800x450/14102a/9d4edd?text=Vivaldi+Browser" alt="Vivaldi Browser" />
-      <img src="https://via.placeholder.com/800x450/14102a/7a09b8?text=Custom+Panel+%26+Icons" alt="Custom UI" />
+      <img src="https://via.placeholder.com/800x450/3a0ca3/e0aaff?text=Instellar+Desktop" alt="Desktop" class="slide-up" style="--delay: 0.3s;" />
+      <img src="https://via.placeholder.com/800x450/4361ee/bc57ff?text=Terminal" alt="Terminal" class="slide-up" style="--delay: 0.5s;" />
+      <img src="https://via.placeholder.com/800x450/4cc9f0/9d4edd?text=Browser" alt="Browser" class="slide-up" style="--delay: 0.7s;" />
+      <img src="https://via.placeholder.com/800x450/5a189a/7a09b8?text=Icons+%26+Panel" alt="UI" class="slide-up" style="--delay: 0.9s;" />
     </div>
   </section>
 
   <!-- Comparison -->
   <section class="comparison">
-    <h2>How It Compares</h2>
-    <table class="compare-table">
+    <h2 class="section-title">How It Compares</h2>
+    <table class="compare-table slide-up" style="--delay: 0.5s;">
       <thead>
         <tr>
           <th></th>
@@ -82,27 +81,9 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Base</td>
-          <td>Arch Linux</td>
-          <td>Debian</td>
-          <td>NT</td>
-          <td>NT</td>
-        </tr>
-        <tr>
-          <td>RAM Usage</td>
-          <td>~400 MB</td>
-          <td>~1.2 GB</td>
-          <td>~2 GB</td>
-          <td>~2.5 GB</td>
-        </tr>
-        <tr>
-          <td>Boot Time</td>
-          <td>3 sec</td>
-          <td>12 sec</td>
-          <td>25 sec</td>
-          <td>30 sec</td>
-        </tr>
+        <tr><td>Base</td><td>Arch Linux</td><td>Debian</td><td>NT</td><td>NT</td></tr>
+        <tr><td>RAM Usage</td><td>~400 MB</td><td>~1.2 GB</td><td>~2 GB</td><td>~2.5 GB</td></tr>
+        <tr><td>Boot Time</td><td>3 sec</td><td>12 sec</td><td>25 sec</td><td>30 sec</td></tr>
         <tr>
           <td>Bloatware</td>
           <td><i class="fas fa-times-circle" style="color: #e0aaff;"></i></td>
@@ -112,7 +93,7 @@
         </tr>
         <tr>
           <td>Customization</td>
-          <td><i class="fas fa-check-circle" style="color: #e0aaff;"></i></td>
+          <td><i class="fas fa-check-circle" style="color: #4cc9f0;"></i></td>
           <td><i class="fas fa-check-circle" style="color: #f87171;"></i></td>
           <td><i class="fas fa-times-circle" style="color: #f87171;"></i></td>
           <td><i class="fas fa-times-circle" style="color: #f87171;"></i></td>
@@ -122,10 +103,10 @@
   </section>
 
   <!-- Download -->
-  <section class="download">
-    <h2>Download & Install</h2>
+  <section class="download" id="download">
+    <h2 class="section-title">Download & Install</h2>
     <p>Instellar OS ships as a ready-to-burn ISO image.</p>
-    <a href="#" class="btn-download">Download ISO (1.2 GB)</a>
+    <a href="#" class="btn-download pulse-glow">Download ISO (1.2 GB)</a>
     <p class="install-guide">
       <a href="https://github.com/instellar-os/docs">Installation Guide →</a>
     </p>
@@ -133,12 +114,12 @@
 
   <!-- Community -->
   <section class="community">
-    <h2>Community & Support</h2>
+    <h2 class="section-title">Community & Support</h2>
     <div class="links">
-      <a href="https://discord.gg/instellar" target="_blank"><i class="fab fa-discord"></i> Discord</a>
-      <a href="https://t.me/instellaros" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
-      <a href="https://github.com/instellar-os" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-      <a href="https://docs.instellar.dev" target="_blank"><i class="fas fa-book"></i> Docs</a>
+      <a href="https://discord.gg/instellar" target="_blank" class="glow-link"><i class="fab fa-discord"></i> Discord</a>
+      <a href="https://t.me/instellaros" target="_blank" class="glow-link"><i class="fab fa-telegram"></i> Telegram</a>
+      <a href="https://github.com/instellar-os" target="_blank" class="glow-link"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://docs.instellar.dev" target="_blank" class="glow-link"><i class="fas fa-book"></i> Docs</a>
     </div>
   </section>
 
@@ -148,6 +129,5 @@
     <p>License: GNU/GPL v3 • Powered by Arch Linux</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
