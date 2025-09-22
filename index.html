@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Instellar OS — Beyond Performance, Beyond Simplicity</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;700&family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+  <!-- Fuentes futuristas -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/3b4b9a5e4e.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -19,7 +20,7 @@
     <div class="hero-content">
       <h1 class="logo-text">Instellar OS</h1>
       <p class="tagline">Beyond Performance, Beyond Simplicity</p>
-      <a href="#download" class="btn-primary pulse-glow">Download Now</a>
+      <a href="#editions" class="btn-primary pulse-glow">Explore Editions</a>
     </div>
   </section>
 
@@ -34,8 +35,8 @@
       </div>
       <div class="feature-card float-in" style="--delay: 0.2s;">
         <i class="fas fa-palette glow-icon"></i>
-        <h3>Minimal Cosmic Aesthetic</h3>
-        <p>Dark themes with deep purples, subtle glows, and elegant UI design.</p>
+        <h3>Cosmic Aesthetic</h3>
+        <p>Dark themes with deep reds, lava glows, and elegant UI design.</p>
       </div>
       <div class="feature-card float-in" style="--delay: 0.4s;">
         <i class="fas fa-satellite glow-icon"></i>
@@ -45,7 +46,7 @@
       <div class="feature-card float-in" style="--delay: 0.6s;">
         <i class="fas fa-wrench glow-icon"></i>
         <h3>Full Customization</h3>
-        <p>Lightweight XFCE, deeply customizable with cosmic-inspired themes.</p>
+        <p>Choose your edition, desktop, and level of minimalism.</p>
       </div>
       <div class="feature-card float-in" style="--delay: 0.8s;">
         <i class="fas fa-globe glow-icon"></i>
@@ -55,64 +56,98 @@
     </div>
   </section>
 
-  <!-- Screenshots -->
-  <section class="screenshots">
-    <h2 class="section-title">Screenshots</h2>
-    <div class="gallery">
-      <img src="https://via.placeholder.com/800x450/8a0f0f/f48c06?text=Instellar+Desktop" alt="Desktop" class="slide-up" style="--delay: 0.3s;" />
-      <img src="https://via.placeholder.com/800x450/c1121f/e63946?text=Terminal" alt="Terminal" class="slide-up" style="--delay: 0.5s;" />
-      <img src="https://via.placeholder.com/800x450/e63946/ffadad?text=Browser" alt="Browser" class="slide-up" style="--delay: 0.7s;" />
-      <img src="https://via.placeholder.com/800x450/f48c06/8a0f0f?text=Icons+%26+Panel" alt="UI" class="slide-up" style="--delay: 0.9s;" />
+  <!-- EDITIONS / FLAVORS -->
+  <section class="editions" id="editions">
+    <h2 class="section-title">Choose Your Edition</h2>
+    <p class="editions-subtitle">Each flavor crafted for a different kind of explorer.</p>
+
+    <div class="edition-cards">
+      <!-- Nova Edition -->
+      <div class="edition-card">
+        <div class="edition-header nova">
+          <h3>Nova Edition</h3>
+          <span class="chip">Recommended</span>
+        </div>
+        <p>Lightweight XFCE, perfect balance of beauty and speed.</p>
+        <div class="carousel" data-carousel="nova">
+          <img src="https://via.placeholder.com/600x340/1a0000/f48c06?text=Nova+Desktop" alt="Nova Desktop" class="active" />
+          <img src="https://via.placeholder.com/600x340/1a0000/e63946?text=Nova+Terminal" alt="Nova Terminal" />
+          <img src="https://via.placeholder.com/600x340/1a0000/ffadad?text=Nova+Apps" alt="Nova Apps" />
+        </div>
+        <div class="carousel-nav">
+          <button class="nav-btn active" data-index="0"></button>
+          <button class="nav-btn" data-index="1"></button>
+          <button class="nav-btn" data-index="2"></button>
+        </div>
+        <a href="#" class="btn-download-small">Download Nova (1.2 GB)</a>
+      </div>
+
+      <!-- Pulsar Edition -->
+      <div class="edition-card">
+        <div class="edition-header pulsar">
+          <h3>Pulsar Edition</h3>
+          <span class="chip">KDE Plasma</span>
+        </div>
+        <p>Powerful KDE Plasma with smooth animations and rich features.</p>
+        <div class="carousel" data-carousel="pulsar">
+          <img src="https://via.placeholder.com/600x340/1a0000/f48c06?text=Pulsar+Plasma" alt="Pulsar Plasma" class="active" />
+          <img src="https://via.placeholder.com/600x340/1a0000/e63946?text=Pulsar+Widgets" alt="Pulsar Widgets" />
+          <img src="https://via.placeholder.com/600x340/1a0000/ffadad?text=Pulsar+Settings" alt="Pulsar Settings" />
+        </div>
+        <div class="carousel-nav">
+          <button class="nav-btn active" data-index="0"></button>
+          <button class="nav-btn" data-index="1"></button>
+          <button class="nav-btn" data-index="2"></button>
+        </div>
+        <a href="#" class="btn-download-small">Download Pulsar (1.8 GB)</a>
+      </div>
+
+      <!-- Quasar Edition -->
+      <div class="edition-card">
+        <div class="edition-header quasar">
+          <h3>Quasar Edition</h3>
+          <span class="chip">Minimalist</span>
+        </div>
+        <p>Bare-metal experience with i3wm. For terminal lovers.</p>
+        <div class="carousel" data-carousel="quasar">
+          <img src="https://via.placeholder.com/600x340/000000/c1121f?text=Quasar+i3wm" alt="Quasar i3" class="active" />
+          <img src="https://via.placeholder.com/600x340/000000/e63946?text=Quasar+Alacritty" alt="Quasar Terminal" />
+          <img src="https://via.placeholder.com/600x340/000000/f48c06?text=Quasar+Config" alt="Quasar Config" />
+        </div>
+        <div class="carousel-nav">
+          <button class="nav-btn active" data-index="0"></button>
+          <button class="nav-btn" data-index="1"></button>
+          <button class="nav-btn" data-index="2"></button>
+        </div>
+        <a href="#" class="btn-download-small">Download Quasar (800 MB)</a>
+      </div>
+
+      <!-- Nebula Edition -->
+      <div class="edition-card">
+        <div class="edition-header nebula">
+          <h3>Nebula Edition</h3>
+          <span class="chip">Cosmic UI</span>
+        </div>
+        <p>Animated themes, starry backgrounds, cosmic sound effects.</p>
+        <div class="carousel" data-carousel="nebula">
+          <img src="https://via.placeholder.com/600x340/000000/8a0f0f?text=Nebula+Theme" alt="Nebula Theme" class="active" />
+          <img src="https://via.placeholder.com/600x340/000000/f48c06?text=Nebula+Boot" alt="Nebula Boot" />
+          <img src="https://via.placeholder.com/600x340/000000/e63946?text=Nebula+Wallpaper" alt="Nebula Wallpaper" />
+        </div>
+        <div class="carousel-nav">
+          <button class="nav-btn active" data-index="0"></button>
+          <button class="nav-btn" data-index="1"></button>
+          <button class="nav-btn" data-index="2"></button>
+        </div>
+        <a href="#" class="btn-download-small">Download Nebula (1.5 GB)</a>
+      </div>
     </div>
-  </section>
-
-  <section class="comparison">
-    <h2 class="section-title">How It Compares</h2>
-    <table class="compare-table slide-up" style="--delay: 0.5s;">
-      <thead>
-        <tr>
-          <th></th>
-          <th>Instellar OS</th>
-          <th>Ubuntu</th>
-          <th>Windows 10</th>
-          <th>Windows 11</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Base</td><td>Arch Linux</td><td>Debian</td><td>NT</td><td>NT</td></tr>
-        <tr><td>RAM Usage</td><td>~400 MB</td><td>~1.2 GB</td><td>~2 GB</td><td>~2.5 GB</td></tr>
-        <tr><td>Boot Time</td><td>3 sec</td><td>12 sec</td><td>25 sec</td><td>30 sec</td></tr>
-        <tr>
-          <td>Bloatware</td>
-          <td><i class="fas fa-times-circle" style="color: #ffadad;"></i></td>
-          <td><i class="fas fa-check-circle" style="color: #f87171;"></i></td>
-          <td><i class="fas fa-check-circle" style="color: #f87171;"></i></td>
-          <td><i class="fas fa-check-circle" style="color: #f87171;"></i></td>
-        </tr>
-        <tr>
-          <td>Customization</td>
-          <td><i class="fas fa-check-circle" style="color: #4cc9f0;"></i></td>
-          <td><i class="fas fa-check-circle" style="color: #f87171;"></i></td>
-          <td><i class="fas fa-times-circle" style="color: #f87171;"></i></td>
-          <td><i class="fas fa-times-circle" style="color: #f87171;"></i></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <!-- Download -->
-  <section class="download" id="download">
-    <h2 class="section-title">Download & Install</h2>
-    <p>Instellar OS ships as a ready-to-burn ISO image.</p>
-    <a href="#" class="btn-download pulse-glow">Download ISO (1.2 GB)</a>
-    <p class="install-guide">
-      <a href="https://github.com/instellar-os/docs">Installation Guide →</a>
-    </p>
   </section>
 
   <!-- Community -->
   <section class="community">
     <h2 class="section-title">Community & Support</h2>
+    <p class="community-subtitle">Join the cosmic network of Instellar users.</p>
     <div class="links">
       <a href="https://discord.gg/instellar" target="_blank" class="glow-link"><i class="fab fa-discord"></i> Discord</a>
       <a href="https://t.me/instellaros" target="_blank" class="glow-link"><i class="fab fa-telegram"></i> Telegram</a>
