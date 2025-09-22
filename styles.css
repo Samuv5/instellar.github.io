@@ -1,3 +1,5 @@
+/* styles.css — Estilos base y generales */
+
 /* Reset */
 * {
   margin: 0;
@@ -247,32 +249,6 @@ code, .terminal {
   transition: all 0.6s ease;
 }
 
-.edition-header {
-  padding: 0.8rem 1rem;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-
-.edition-header h3 {
-  margin: 0;
-  font-size: 1.5rem;
-  color: white;
-}
-
-.chip {
-  font-size: 0.8rem;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  padding: 0.3rem 0.6rem;
-  border-radius: 50px;
-  margin-left: 0.8rem;
-}
-
-.nova { background: linear-gradient(to right, #c1121f, #e63946); }
-.pulsar { background: linear-gradient(to right, #f48c06, #c1121f); }
-.quasar { background: linear-gradient(to right, #8a0f0f, #1a0000); }
-.nebula { background: linear-gradient(to right, #e63946, #8a0f0f); }
-
 .carousel {
   margin: 1rem 0;
   overflow: hidden;
@@ -327,6 +303,18 @@ code, .terminal {
   padding: 6rem 2rem;
   background: linear-gradient(135deg, #1a0000, #3a0000, #000000);
   text-align: center;
+  position: relative;
+}
+
+.community::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f48c06' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.2;
 }
 
 .links {
