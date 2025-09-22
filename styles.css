@@ -6,13 +6,18 @@
 }
 
 body {
-  font-family: 'Exo 2', sans-serif;
-  background: #2b0000;
+  font-family: 'Rajdhani', sans-serif;
+  background: #000000;
   color: #ffadad;
   line-height: 1.7;
   overflow-x: hidden;
   position: relative;
   z-index: 1;
+}
+
+/* Fuentes personalizadas */
+h1, h2, h3, .section-title, .edition-header h3 {
+  font-family: 'Orbitron', sans-serif;
 }
 
 /* === FONDO DE PARTÍCULAS / LAVA ANIMADA === */
@@ -42,7 +47,7 @@ body {
   100% { transform: translate(50px, 50px); }
 }
 
-/* === HERO SECTION (Fuego Cósmico) === */
+/* === HERO SECTION === */
 .hero {
   height: 100vh;
   background: radial-gradient(ellipse at center, #3a0000 0%, #000000 70%);
@@ -73,7 +78,6 @@ body {
   animation: fadeInUp 1.5s forwards;
 }
 
-/* === LOGO ANIMADO EN ROJO Y NARANJA === */
 .logo-text {
   font-size: 4rem;
   margin-bottom: 1rem;
@@ -117,33 +121,34 @@ body {
   to { opacity: 1; }
 }
 
-/* === BOTONES CON BRILLO DE LAVA === */
+/* === BOTONES === */
 .btn-primary,
-.btn-download {
+.btn-download-small {
   display: inline-block;
   background: linear-gradient(45deg, #c1121f, #e63946, #f48c06);
   color: white;
-  padding: 1.2rem 3rem;
-  font-size: 1.3rem;
   font-weight: 600;
   border: none;
-  border-radius: 60px;
   cursor: pointer;
-  box-shadow: 0 6px 25px rgba(230, 57, 70, 0.5);
   transition: all 0.3s ease;
-  margin: 1.5rem 0;
   text-decoration: none;
   position: relative;
   overflow: hidden;
 }
 
-.btn-primary:hover,
-.btn-download:hover {
+.btn-primary {
+  padding: 1.2rem 3rem;
+  font-size: 1.3rem;
+  border-radius: 60px;
+  box-shadow: 0 6px 25px rgba(230, 57, 70, 0.5);
+  margin: 1.5rem 0;
+}
+
+.btn-primary:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 40px rgba(230, 57, 70, 0.8);
 }
 
-/* Efecto de pulso tipo lava */
 .pulse-glow {
   animation: pulseLava 2s infinite;
 }
@@ -157,18 +162,29 @@ body {
   }
 }
 
-/* === TÍTULOS DE SECCIÓN === */
+/* === SECCIÓN TÍTULOS === */
 .section-title {
   font-size: 2.8rem;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   background: linear-gradient(90deg, #ffadad, #f48c06, #e63946, #c1121f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: rainbowShift 10s linear infinite;
 }
 
-/* === TARJETAS DE CARACTERÍSTICAS === */
+.editions-subtitle,
+.community-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #dda0a0;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === FEATURES === */
 .features {
   padding: 6rem 2rem;
   background: #1a0000;
@@ -205,20 +221,6 @@ body {
   font-size: 0.95rem;
 }
 
-@keyframes float-in {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.feature-card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 15px 40px rgba(230, 57, 70, 0.3);
-  border-color: rgba(244, 140, 6, 0.5);
-}
-
-/* Iconos con brillo rojizo */
 .glow-icon {
   font-size: 2.8rem;
   color: #f48c06;
@@ -233,121 +235,132 @@ body {
   }
 }
 
-/* === GALLERY === */
-.screenshots {
+/* === EDITIONS === */
+.editions {
   padding: 6rem 2rem;
   background: #000000;
   text-align: center;
 }
 
-.gallery {
+.edition-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  margin-top: 2.5rem;
-}
-
-.gallery img {
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-  max-width: 45%;
-  height: auto;
-  border: 2px solid rgba(230, 57, 70, 0.4);
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.5s ease;
-}
-
-.gallery img.slide-up {
-  animation: slide-up 0.8s forwards;
-}
-
-@keyframes slide-up {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 20px 50px rgba(244, 140, 6, 0.4);
-}
-
-/* === COMPARISON === */
-.comparison {
-  padding: 6rem 2rem;
-  background: #220000;
-}
-
-.compare-table {
-  width: 100%;
-  max-width: 1000px;
+  max-width: 1400px;
   margin: 0 auto;
-  border-collapse: collapse;
-  background: rgba(193, 18, 31, 0.15);
+}
+
+.edition-card {
+  background: rgba(193, 18, 31, 0.1);
   border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(230, 57, 70, 0.3);
-  opacity: 0;
-  transform: translateY(40px);
-  animation: slide-up 1s forwards;
-}
-
-.compare-table th,
-.compare-table td {
-  padding: 1.2rem;
+  padding: 1.5rem;
+  width: 300px;
   text-align: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
 }
 
-.compare-table th {
-  background: linear-gradient(to right, #8a0f0f, #c1121f);
+.edition-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(230, 57, 70, 0.3);
+}
+
+.edition-header {
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.edition-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
   color: white;
-  font-weight: 600;
-  text-transform: uppercase;
 }
 
-.compare-table tr:hover {
-  background: rgba(230, 57, 70, 0.15);
+.chip {
+  font-size: 0.8rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 50px;
+  margin-left: 0.8rem;
 }
 
-/* === DOWNLOAD === */
-.download {
-  padding: 6rem 2rem;
-  text-align: center;
-  background: #2b0000;
+.nova { background: linear-gradient(to right, #c1121f, #e63946); }
+.pulsar { background: linear-gradient(to right, #f48c06, #c1121f); }
+.quasar { background: linear-gradient(to right, #8a0f0f, #1a0000); }
+.nebula { background: linear-gradient(to right, #e63946, #8a0f0f); }
+
+.carousel {
+  margin: 1rem 0;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-.download p {
-  font-size: 1.3rem;
-  margin-bottom: 1.6rem;
-  color: #ffadad;
+.carousel img {
+  width: 100%;
+  display: none;
+  border-radius: 10px;
 }
 
-.install-guide a {
-  color: #f48c06;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1.1rem;
+.carousel img.active {
+  display: block;
+}
+
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.8rem 0;
+}
+
+.nav-btn {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.nav-btn.active {
+  background: #f48c06;
+}
+
+.btn-download-small {
   display: inline-block;
-  margin-top: 1rem;
-  transition: all 0.3s ease;
+  padding: 0.8rem 1.8rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(230, 57, 70, 0.5);
 }
 
-.install-guide a:hover {
-  color: #e63946;
-  text-decoration: underline;
-  text-shadow: 0 0 10px rgba(244, 140, 6, 0.5);
+.btn-download-small:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(230, 57, 70, 0.7);
 }
 
 /* === COMMUNITY === */
 .community {
   padding: 6rem 2rem;
-  background: #000000;
+  background: linear-gradient(135deg, #1a0000, #3a0000, #000000);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.community::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f48c06' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.2;
 }
 
 .links {
@@ -392,19 +405,35 @@ footer p {
   margin: 0.7rem 0;
 }
 
-/* === RESPONSIVE === */
+/* Animaciones generales */
+@keyframes float-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .logo-text {
     font-size: 3rem;
   }
 
-  .gallery img {
-    max-width: 100%;
+  .edition-cards {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .features-grid {
-    grid-template-columns: 1fr;
-    gap: 1.8rem;
+  .edition-card {
+    width: 100%;
+    max-width: 350px;
   }
 
   .links {
@@ -412,8 +441,7 @@ footer p {
     gap: 1.5rem;
   }
 
-  .btn-primary,
-  .btn-download {
+  .btn-primary {
     padding: 1rem 2.5rem;
     font-size: 1.1rem;
   }
