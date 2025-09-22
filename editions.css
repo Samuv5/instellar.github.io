@@ -139,3 +139,23 @@
   margin-left: 0.8rem;
   font-weight: 600;
 }
+/* Colores de texto para cada edición */
+.pulsar h3 {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(193, 18, 31, 0.6);
+}
+
+.nova h3 {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(244, 140, 6, 0.6);
+}
+
+.quasar h3 {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(114, 9, 183, 0.6);
+}
+
+.nebula h3 {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(67, 97, 238, 0.6);
+}
