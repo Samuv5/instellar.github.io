@@ -1,0 +1,37 @@
+/* quasar.css - Tema Morado */
+:root {
+  --main-color: #7209b7;
+  --accent-color: #3a0000;
+  --light-color: #e0c8ff;
+  --dark-color: #000000;
+}
+
+body {
+  background: linear-gradient(135deg, var(--dark-color), var(--main-color)) !important;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--dark-color), var(--main-color)) !important;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, var(--accent-color), var(--main-color)) !important;
+  box-shadow: 0 6px 25px rgba(114, 9, 183, 0.5) !important;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 10px 30px rgba(114, 9, 183, 0.7) !important;
+}
+
+.section-title {
+  color: #ffffff;
+  text-shadow: 0 0 15px rgba(114, 9, 183, 0.4);
+}
+
+.feature-card {
+  border: 1px solid rgba(114, 9, 183, 0.3);
+}
+
+.compare-table th {
+  background: linear-gradient(to right, var(--accent-color), var(--main-color));
+}
