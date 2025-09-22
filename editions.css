@@ -3,25 +3,25 @@
 /* === FONDOS DE HERO POR EDICIÓN === */
 
 .pulsar-bg {
-  background: linear-gradient(135deg, #3a0000, #8a0f0f);
-  background-size: 400% 400%;
-  animation: gradientShift 12s ease infinite;
-}
-
-.nova-bg {
   background: linear-gradient(135deg, #3a0000, #c1121f);
   background-size: 400% 400%;
   animation: gradientShift 12s ease infinite;
 }
 
+.nova-bg {
+  background: linear-gradient(135deg, #3a0000, #f48c06);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+}
+
 .quasar-bg {
-  background: linear-gradient(135deg, #3a0000, #e63946);
+  background: linear-gradient(135deg, #000000, #7209b7);
   background-size: 400% 400%;
   animation: gradientShift 12s ease infinite;
 }
 
 .nebula-bg {
-  background: linear-gradient(135deg, #000000, #8a0f0f);
+  background: linear-gradient(135deg, #000000, #4361ee);
   background-size: 400% 400%;
   animation: gradientShift 12s ease infinite;
 }
@@ -51,21 +51,21 @@
   z-index: 1;
 }
 
-/* Degradados específicos */
+/* Degradados específicos por color asignado */
 .pulsar {
-  background: linear-gradient(135deg, #f48c06, #c1121f);
+  background: linear-gradient(135deg, #c1121f, #8a0f0f);
 }
 
 .nova {
-  background: linear-gradient(135deg, #c1121f, #e63946);
+  background: linear-gradient(135deg, #f48c06, #c1121f);
 }
 
 .quasar {
-  background: linear-gradient(135deg, #e63946, #8a0f0f);
+  background: linear-gradient(135deg, #7209b7, #3a0000);
 }
 
 .nebula {
-  background: linear-gradient(135deg, #8a0f0f, #3a0000);
+  background: linear-gradient(135deg, #4361ee, #000000);
 }
 
 /* Efecto de brillo animado en encabezados */
@@ -83,22 +83,22 @@
 }
 
 .pulsar::before {
-  background: linear-gradient(45deg, transparent, rgba(244, 140, 6, 0.4), transparent, rgba(193, 18, 31, 0.4));
+  background: linear-gradient(45deg, transparent, rgba(193, 18, 31, 0.4), transparent, rgba(138, 15, 15, 0.4));
   animation: pulseShine 3s infinite alternate;
 }
 
 .nova::before {
-  background: linear-gradient(45deg, transparent, rgba(193, 18, 31, 0.5), transparent, rgba(230, 57, 70, 0.4));
+  background: linear-gradient(45deg, transparent, rgba(244, 140, 6, 0.4), transparent, rgba(193, 18, 31, 0.4));
   animation: pulseShine 3.5s infinite alternate;
 }
 
 .quasar::before {
-  background: linear-gradient(45deg, transparent, rgba(230, 57, 70, 0.5), transparent, rgba(138, 15, 15, 0.4));
+  background: linear-gradient(45deg, transparent, rgba(114, 9, 183, 0.4), transparent, rgba(58, 0, 0, 0.4));
   animation: pulseShine 4s infinite alternate;
 }
 
 .nebula::before {
-  background: linear-gradient(45deg, transparent, rgba(138, 15, 15, 0.5), transparent, rgba(58, 0, 0, 0.4));
+  background: linear-gradient(45deg, transparent, rgba(67, 97, 238, 0.4), transparent, rgba(0, 0, 0, 0.4));
   animation: pulseShine 3.8s infinite alternate;
 }
 
@@ -110,22 +110,22 @@
 /* === HOVER EN TARJETAS POR EDICIÓN === */
 
 .edition-card:hover .pulsar {
-  background: linear-gradient(135deg, #ff9a30, #d4202b);
+  background: linear-gradient(135deg, #d4202b, #a81a1a);
   transform: translateY(-4px);
 }
 
 .edition-card:hover .nova {
-  background: linear-gradient(135deg, #d4202b, #f04a5a);
+  background: linear-gradient(135deg, #ff9a30, #d4202b);
   transform: translateY(-4px);
 }
 
 .edition-card:hover .quasar {
-  background: linear-gradient(135deg, #f04a5a, #a81a1a);
+  background: linear-gradient(135deg, #8a2be2, #5a0000);
   transform: translateY(-4px);
 }
 
 .edition-card:hover .nebula {
-  background: linear-gradient(135deg, #a81a1a, #5a0000);
+  background: linear-gradient(135deg, #5a7dff, #1a1a1a);
   transform: translateY(-4px);
 }
 
