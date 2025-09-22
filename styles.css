@@ -7,22 +7,22 @@
 
 body {
   font-family: 'Exo 2', sans-serif;
-  background: #0a051a;
-  color: #e0d5ff;
+  background: #000000;
+  color: #ffadad;
   line-height: 1.7;
   overflow-x: hidden;
   position: relative;
   z-index: 1;
 }
 
-/* === FONDO DE ESTRELLAS ANIMADO === */
+/* === FONDO DE PARTÍCULAS / LAVA ANIMADA === */
 .stars {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(2px 2px #e0aaff, #0a051a 2px);
+  background-image: radial-gradient(2px 2px #f48c06, #000000 2px);
   background-size: 50px 50px;
   opacity: 0.3;
   z-index: -3;
@@ -30,19 +30,11 @@ body {
 }
 
 .stars2 {
-  background-image: radial-gradient(1px 1px #9d4edd, #0a051a 1px);
+  background-image: radial-gradient(1px 1px #e63946, #000000 1px);
   background-size: 30px 30px;
   opacity: 0.2;
   z-index: -4;
   animation: pan 150s linear infinite reverse;
-}
-
-.stars3 {
-  background-image: radial-gradient(1px 1px #4cc9f0, #0a051a 1px);
-  background-size: 20px 20px;
-  opacity: 0.15;
-  z-index: -5;
-  animation: pan 200s linear infinite;
 }
 
 @keyframes pan {
@@ -50,14 +42,14 @@ body {
   100% { transform: translate(50px, 50px); }
 }
 
-/* === HERO SECTION === */
+/* === HERO SECTION (Fuego Cósmico) === */
 .hero {
   height: 100vh;
-  background: radial-gradient(ellipse at center, #1a083f 0%, #0a051a 70%);
+  background: radial-gradient(ellipse at center, #3a0000 0%, #000000 70%);
   background-image: 
-    radial-gradient(circle at 20% 30%, rgba(90, 24, 154, 0.4) 0%, transparent 30%),
-    radial-gradient(circle at 80% 70%, rgba(157, 78, 221, 0.3) 0%, transparent 30%),
-    linear-gradient(135deg, #5a189a 0%, #240046 50%, #0a051a 100%);
+    radial-gradient(circle at 20% 30%, rgba(193, 18, 31, 0.4) 0%, transparent 30%),
+    radial-gradient(circle at 80% 70%, rgba(244, 140, 6, 0.3) 0%, transparent 30%),
+    linear-gradient(135deg, #8a0f0f 0%, #4a0505 50%, #000000 100%);
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
   display: flex;
@@ -81,24 +73,28 @@ body {
   animation: fadeInUp 1.5s forwards;
 }
 
-/* === LOGO ANIMADO === */
+/* === LOGO ANIMADO EN ROJO Y NARANJA === */
 .logo-text {
   font-size: 4rem;
   margin-bottom: 1rem;
   font-weight: 700;
   letter-spacing: 1px;
-  background: linear-gradient(90deg, #e0aaff, #9d4edd, #4cc9f0, #4361ee, #5a189a);
+  background: linear-gradient(90deg, #ffadad, #f48c06, #e63946, #c1121f, #8a0f0f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 20px rgba(224, 170, 255, 0.5);
-  animation: neonGlow 3s ease-in-out infinite alternate, rainbowShift 8s linear infinite;
+  text-shadow: 0 0 20px rgba(244, 140, 6, 0.6);
+  animation: neonGlowRed 3s ease-in-out infinite alternate, rainbowShift 8s linear infinite;
   position: relative;
   display: inline-block;
 }
 
-@keyframes neonGlow {
-  0% { text-shadow: 0 0 10px rgba(187, 119, 255, 0.8), 0 0 20px rgba(157, 78, 221, 0.4); }
-  100% { text-shadow: 0 0 20px rgba(187, 119, 255, 1), 0 0 30px rgba(157, 78, 221, 0.6); }
+@keyframes neonGlowRed {
+  0% {
+    text-shadow: 0 0 10px rgba(244, 140, 6, 0.8), 0 0 20px rgba(230, 57, 70, 0.4);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(244, 140, 6, 1), 0 0 30px rgba(230, 57, 70, 0.7);
+  }
 }
 
 @keyframes rainbowShift {
@@ -108,7 +104,7 @@ body {
 
 .tagline {
   font-size: 1.6rem;
-  color: #d8b5ff;
+  color: #ffadad;
   margin: 1.5rem 0;
   font-weight: 300;
   letter-spacing: 0.5px;
@@ -121,11 +117,11 @@ body {
   to { opacity: 1; }
 }
 
-/* === BOTONES CON GLOW Y PULSO === */
+/* === BOTONES CON BRILLO DE LAVA === */
 .btn-primary,
 .btn-download {
   display: inline-block;
-  background: linear-gradient(45deg, #9d4edd, #e0aaff, #4cc9f0);
+  background: linear-gradient(45deg, #c1121f, #e63946, #f48c06);
   color: white;
   padding: 1.2rem 3rem;
   font-size: 1.3rem;
@@ -133,7 +129,7 @@ body {
   border: none;
   border-radius: 60px;
   cursor: pointer;
-  box-shadow: 0 6px 25px rgba(157, 78, 221, 0.5);
+  box-shadow: 0 6px 25px rgba(230, 57, 70, 0.5);
   transition: all 0.3s ease;
   margin: 1.5rem 0;
   text-decoration: none;
@@ -144,20 +140,20 @@ body {
 .btn-primary:hover,
 .btn-download:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(157, 78, 221, 0.8);
+  box-shadow: 0 12px 40px rgba(230, 57, 70, 0.8);
 }
 
-/* Efecto de pulso y brillo */
+/* Efecto de pulso tipo lava */
 .pulse-glow {
-  animation: pulse 2s infinite;
+  animation: pulseLava 2s infinite;
 }
 
-@keyframes pulse {
+@keyframes pulseLava {
   0%, 100% {
-    box-shadow: 0 0 15px rgba(157, 78, 221, 0.5), 0 0 30px rgba(157, 78, 221, 0.3);
+    box-shadow: 0 0 15px rgba(230, 57, 70, 0.5), 0 0 30px rgba(244, 140, 6, 0.4);
   }
   50% {
-    box-shadow: 0 0 25px rgba(157, 78, 221, 0.8), 0 0 40px rgba(157, 78, 221, 0.5);
+    box-shadow: 0 0 25px rgba(230, 57, 70, 0.8), 0 0 40px rgba(244, 140, 6, 0.6);
   }
 }
 
@@ -166,7 +162,7 @@ body {
   font-size: 2.8rem;
   text-align: center;
   margin-bottom: 3rem;
-  background: linear-gradient(90deg, #e0aaff, #9d4edd, #4cc9f0, #5a189a);
+  background: linear-gradient(90deg, #ffadad, #f48c06, #e63946, #c1121f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: rainbowShift 10s linear infinite;
@@ -175,7 +171,7 @@ body {
 /* === TARJETAS DE CARACTERÍSTICAS === */
 .features {
   padding: 6rem 2rem;
-  background: #10082a;
+  background: #1a0000;
 }
 
 .features-grid {
@@ -187,11 +183,11 @@ body {
 }
 
 .feature-card {
-  background: rgba(90, 24, 154, 0.15);
+  background: rgba(193, 18, 31, 0.1);
   padding: 2.5rem;
   border-radius: 20px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(157, 78, 221, 0.3);
+  border: 1px solid rgba(230, 57, 70, 0.3);
   transition: all 0.4s ease;
   text-align: center;
   opacity: 0;
@@ -200,12 +196,12 @@ body {
 }
 
 .feature-card h3 {
-  color: #ffffff;
+  color: #fff0e0;
   margin: 1rem 0 0.8rem;
 }
 
 .feature-card p {
-  color: #c5b6e0;
+  color: #dda0a0;
   font-size: 0.95rem;
 }
 
@@ -218,29 +214,29 @@ body {
 
 .feature-card:hover {
   transform: translateY(-12px);
-  box-shadow: 0 15px 40px rgba(157, 78, 221, 0.3);
-  border-color: rgba(187, 119, 255, 0.5);
+  box-shadow: 0 15px 40px rgba(230, 57, 70, 0.3);
+  border-color: rgba(244, 140, 6, 0.5);
 }
 
-/* Iconos con brillo */
+/* Iconos con brillo rojizo */
 .glow-icon {
   font-size: 2.8rem;
-  color: #e0aaff;
+  color: #f48c06;
   margin-bottom: 1.2rem;
-  text-shadow: 0 0 15px rgba(224, 170, 255, 0.6);
+  text-shadow: 0 0 15px rgba(244, 140, 6, 0.6);
   animation: pulseIcon 2s infinite alternate;
 }
 
 @keyframes pulseIcon {
   to {
-    text-shadow: 0 0 20px rgba(224, 170, 255, 0.8), 0 0 30px rgba(157, 78, 221, 0.5);
+    text-shadow: 0 0 20px rgba(244, 140, 6, 0.8), 0 0 30px rgba(230, 57, 70, 0.5);
   }
 }
 
 /* === GALLERY === */
 .screenshots {
   padding: 6rem 2rem;
-  background: #0a051a;
+  background: #000000;
   text-align: center;
 }
 
@@ -257,7 +253,7 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
   max-width: 45%;
   height: auto;
-  border: 2px solid rgba(157, 78, 221, 0.4);
+  border: 2px solid rgba(230, 57, 70, 0.4);
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.5s ease;
@@ -276,13 +272,13 @@ body {
 
 .gallery img:hover {
   transform: scale(1.05);
-  box-shadow: 0 20px 50px rgba(157, 78, 221, 0.5);
+  box-shadow: 0 20px 50px rgba(244, 140, 6, 0.4);
 }
 
 /* === COMPARISON === */
 .comparison {
   padding: 6rem 2rem;
-  background: #150c34;
+  background: #220000;
 }
 
 .compare-table {
@@ -290,11 +286,11 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   border-collapse: collapse;
-  background: rgba(90, 24, 154, 0.2);
+  background: rgba(193, 18, 31, 0.15);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(157, 78, 221, 0.3);
+  border: 1px solid rgba(230, 57, 70, 0.3);
   opacity: 0;
   transform: translateY(40px);
   animation: slide-up 1s forwards;
@@ -308,31 +304,31 @@ body {
 }
 
 .compare-table th {
-  background: linear-gradient(to right, #5a189a, #9d4edd);
+  background: linear-gradient(to right, #8a0f0f, #c1121f);
   color: white;
   font-weight: 600;
   text-transform: uppercase;
 }
 
 .compare-table tr:hover {
-  background: rgba(157, 78, 221, 0.15);
+  background: rgba(230, 57, 70, 0.15);
 }
 
 /* === DOWNLOAD === */
 .download {
   padding: 6rem 2rem;
   text-align: center;
-  background: #1a083f;
+  background: #2b0000;
 }
 
 .download p {
   font-size: 1.3rem;
   margin-bottom: 1.6rem;
-  color: #d8b5ff;
+  color: #ffadad;
 }
 
 .install-guide a {
-  color: #e0aaff;
+  color: #f48c06;
   text-decoration: none;
   font-weight: 500;
   font-size: 1.1rem;
@@ -342,15 +338,15 @@ body {
 }
 
 .install-guide a:hover {
-  color: #9d4edd;
+  color: #e63946;
   text-decoration: underline;
-  text-shadow: 0 0 10px rgba(157, 78, 221, 0.4);
+  text-shadow: 0 0 10px rgba(244, 140, 6, 0.5);
 }
 
 /* === COMMUNITY === */
 .community {
   padding: 6rem 2rem;
-  background: #0a051a;
+  background: #000000;
   text-align: center;
 }
 
@@ -363,7 +359,7 @@ body {
 }
 
 .glow-link {
-  color: #e0aaff;
+  color: #ffadad;
   font-size: 1.3rem;
   text-decoration: none;
   display: flex;
@@ -377,19 +373,19 @@ body {
 }
 
 .glow-link:hover {
-  color: #9d4edd;
+  color: #f48c06;
   transform: translateY(-4px);
-  text-shadow: 0 0 15px rgba(157, 78, 221, 0.5);
+  text-shadow: 0 0 15px rgba(244, 140, 6, 0.5);
 }
 
 /* === FOOTER === */
 footer {
-  background: #0d051a;
-  color: #a090c7;
+  background: #000000;
+  color: #aa7777;
   text-align: center;
   padding: 2.5rem;
   font-size: 0.95rem;
-  border-top: 1px solid rgba(157, 78, 221, 0.2);
+  border-top: 1px solid rgba(230, 57, 70, 0.2);
 }
 
 footer p {
