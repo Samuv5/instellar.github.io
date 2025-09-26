@@ -13,14 +13,22 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Estilos para el hero */
+/* Estilos para el hero (toda la pantalla) */
 .hero {
   background: linear-gradient(135deg, var(--dark-color), var(--main-color)) !important;
   color: #ffffff;
   text-align: center;
   padding: 10rem 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-content {
