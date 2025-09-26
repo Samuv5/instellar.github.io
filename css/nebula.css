@@ -1,15 +1,15 @@
-/* nova.css - Tema Naranja para Nova Edition */
+/* nebula.css - Tema Azul para Nebula Edition */
 :root {
-  --main-color: #f48c06;
-  --accent-color: #c1121f;
-  --light-color: #ffdba5;
-  --dark-color: #3a0000;
+  --main-color: #4361ee;
+  --accent-color: #000000;
+  --light-color: #c2d0ff;
+  --dark-color: #000000;
 }
 
-/* Estilos globales para la edición Nova */
+/* Estilos globales para la edición Nebula */
 body {
   background: linear-gradient(135deg, var(--dark-color), var(--main-color)) !important;
-  color: #ffdba5;
+  color: #c2d0ff;
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
@@ -32,10 +32,10 @@ body {
   font-size: 4rem;
   margin-bottom: 1rem;
   font-weight: 700;
-  background: linear-gradient(90deg, #ffffff, #ffdba5);
+  background: linear-gradient(90deg, #ffffff, #c2d0ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 10px rgba(244, 140, 6, 0.4);
+  text-shadow: 0 0 10px rgba(67, 97, 238, 0.4);
 }
 
 .tagline {
@@ -56,12 +56,12 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 6px 25px rgba(244, 140, 6, 0.5) !important;
+  box-shadow: 0 6px 25px rgba(67, 97, 238, 0.5) !important;
 }
 
 .btn-primary:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(244, 140, 6, 0.7) !important;
+  box-shadow: 0 10px 30px rgba(67, 97, 238, 0.7) !important;
 }
 
 /* Estilos para secciones */
@@ -70,7 +70,7 @@ body {
   text-align: center;
   margin-bottom: 1.5rem;
   color: #ffffff;
-  text-shadow: 0 0 15px rgba(244, 140, 6, 0.4);
+  text-shadow: 0 0 15px rgba(67, 97, 238, 0.4);
 }
 
 .features {
@@ -87,31 +87,31 @@ body {
 }
 
 .feature-card {
-  background: rgba(244, 140, 6, 0.1);
+  background: rgba(67, 97, 238, 0.1);
   border-radius: 20px;
   padding: 2.5rem;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(244, 140, 6, 0.3);
+  border: 1px solid rgba(67, 97, 238, 0.3);
   transition: all 0.4s ease;
 }
 
 .feature-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(244, 140, 6, 0.3);
+  box-shadow: 0 20px 40px rgba(67, 97, 238, 0.3);
 }
 
 .glow-icon {
   font-size: 2.8rem;
-  color: #f48c06;
+  color: #4361ee;
   margin-bottom: 1.2rem;
-  text-shadow: 0 0 15px rgba(244, 140, 6, 0.6);
+  text-shadow: 0 0 15px rgba(67, 97, 238, 0.6);
 }
 
 /* Estilos para ediciones */
 .edition-card {
-  background: rgba(244, 140, 6, 0.1);
+  background: rgba(67, 97, 238, 0.1);
   border-radius: 16px;
-  border: 1px solid rgba(244, 140, 6, 0.3);
+  border: 1px solid rgba(67, 97, 238, 0.3);
   padding: 1.5rem;
   width: 300px;
   text-align: center;
@@ -177,7 +177,7 @@ body {
 }
 
 .nav-btn.active {
-  background: #f48c06;
+  background: #4361ee;
 }
 
 /* Estilos para comunidad */
@@ -196,7 +196,7 @@ body {
 }
 
 .glow-link {
-  color: #ffdba5;
+  color: #c2d0ff;
   font-size: 1.3rem;
   text-decoration: none;
   display: flex;
@@ -207,9 +207,9 @@ body {
 }
 
 .glow-link:hover {
-  color: #f48c06;
+  color: #4361ee;
   transform: translateY(-4px);
-  text-shadow: 0 0 15px rgba(244, 140, 6, 0.5);
+  text-shadow: 0 0 15px rgba(67, 97, 238, 0.5);
 }
 
 /* Estilos para pie de página */
@@ -219,7 +219,7 @@ footer {
   text-align: center;
   padding: 2.5rem;
   font-size: 0.95rem;
-  border-top: 1px solid rgba(244, 140, 6, 0.2);
+  border-top: 1px solid rgba(67, 97, 238, 0.2);
 }
 
 footer p {
@@ -232,11 +232,11 @@ footer p {
   max-width: 800px;
   margin: 2rem auto;
   border-collapse: collapse;
-  background: rgba(244, 140, 6, 0.15);
+  background: rgba(67, 97, 238, 0.15);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(244, 140, 6, 0.3);
+  border: 1px solid rgba(67, 97, 238, 0.3);
 }
 
 .compare-table th,
@@ -247,12 +247,12 @@ footer p {
 }
 
 .compare-table th {
-  background: linear-gradient(to right, #3a0000, #f48c06);
+  background: linear-gradient(to right, #000000, #4361ee);
   color: white;
   font-weight: 600;
   text-transform: uppercase;
 }
 
 .compare-table tr:hover {
-  background: rgba(244, 140, 6, 0.1);
+  background: rgba(67, 97, 238, 0.1);
 }
