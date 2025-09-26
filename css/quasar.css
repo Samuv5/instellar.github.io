@@ -1,4 +1,4 @@
-/* quasar.css - Tema Morado */
+/* quasar.css - Tema Morado para Quasar Edition */
 :root {
   --main-color: #7209b7;
   --accent-color: #3a0000;
@@ -6,16 +6,16 @@
   --dark-color: #000000;
 }
 
-/* Estilos globales */
+/* Estilos globales para la edición Quasar */
 body {
   background: linear-gradient(135deg, var(--dark-color), var(--main-color)) !important;
-  color: #ffffff;
+  color: #e0c8ff;
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* Estilos de encabezado */
+/* Estilos para el hero */
 .hero {
   background: linear-gradient(135deg, var(--dark-color), var(--main-color)) !important;
   color: #ffffff;
@@ -45,7 +45,7 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* Estilos de botones */
+/* Estilos para botones */
 .btn-primary {
   background: linear-gradient(45deg, var(--accent-color), var(--main-color)) !important;
   color: #ffffff;
@@ -64,7 +64,7 @@ body {
   box-shadow: 0 10px 30px rgba(114, 9, 183, 0.7) !important;
 }
 
-/* Estilos de secciones */
+/* Estilos para secciones */
 .section-title {
   font-size: 2.8rem;
   text-align: center;
@@ -107,7 +107,7 @@ body {
   text-shadow: 0 0 15px rgba(114, 9, 183, 0.6);
 }
 
-/* Estilos de ediciones */
+/* Estilos para ediciones */
 .edition-card {
   background: rgba(114, 9, 183, 0.1);
   border-radius: 16px;
@@ -142,7 +142,7 @@ body {
   z-index: 1;
 }
 
-/* Estilos de carruseles */
+/* Estilos para carruseles */
 .carousel {
   margin: 1rem 0;
   overflow: hidden;
@@ -180,7 +180,7 @@ body {
   background: #7209b7;
 }
 
-/* Estilos de comunidad */
+/* Estilos para comunidad */
 .community {
   padding: 6rem 2rem;
   background: linear-gradient(135deg, #000000, #1a0000);
@@ -212,7 +212,7 @@ body {
   text-shadow: 0 0 15px rgba(114, 9, 183, 0.5);
 }
 
-/* Estilos de pie de página */
+/* Estilos para pie de página */
 footer {
   background: #000000;
   color: #aa7777;
@@ -224,4 +224,35 @@ footer {
 
 footer p {
   margin: 0.7rem 0;
+}
+
+/* Estilos específicos para la tabla de especificaciones */
+.compare-table {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  background: rgba(114, 9, 183, 0.15);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(114, 9, 183, 0.3);
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 1.2rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.compare-table th {
+  background: linear-gradient(to right, #3a0000, #7209b7);
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.compare-table tr:hover {
+  background: rgba(114, 9, 183, 0.1);
 }
