@@ -607,3 +607,24 @@ a {
   background: rgba(113, 81, 181, 0.2);
   box-shadow: 0 20px 40px var(--royal-purple-2);
 }
+
+/* Ajustes específicos para el hero */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  padding: 10rem 1rem;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}\
