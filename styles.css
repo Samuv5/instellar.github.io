@@ -462,3 +462,63 @@ a {
 #editions + table {
   margin-top: 2rem;
 }
+
+/* Correcciones para elementos faltantes */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.gallery img {
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  width: 250px;
+  height: auto;
+}
+
+.download {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--cosmic-purple), var(--deep-purple));
+}
+
+.btn-download {
+  background: linear-gradient(45deg, var(--vibrant-purple), var(--galaxy-accent));
+  color: var(--cosmic-white);
+  border: none;
+  border-radius: 60px;
+  padding: 1.2rem 3rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 25px var(--cosmic-shadow);
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.btn-download:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px var(--vibrant-purple);
+  background: linear-gradient(45deg, var(--galaxy-accent), var(--vibrant-purple));
+}
+
+.install-guide {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.install-guide a {
+  color: var(--galaxy-accent);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.install-guide a:hover {
+  text-shadow: 0 0 10px var(--vibrant-purple);
+}
