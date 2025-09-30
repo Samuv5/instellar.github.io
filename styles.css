@@ -9,8 +9,8 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #450000;
-  color: #ffadad;
+  background: #1a0033; /* Fondo morado oscuro galáctico */
+  color: #b3a1ff; /* Texto morado claro */
   line-height: 1.7;
   overflow-x: hidden;
   position: relative;
@@ -25,8 +25,8 @@ h1, h2, h3, .section-title {
 
 code, .terminal {
   font-family: 'Roboto Mono', monospace;
-  background: #3a0f0f;
-  color: #f48c06;
+  background: #2a004d; /* Fondo morado oscuro */
+  color: #00d4ff; /* Azul cian brillante */
   padding: 2px 6px;
   border-radius: 4px;
 }
@@ -38,7 +38,7 @@ code, .terminal {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(2px 2px #f48c06, #000000 2px);
+  background-image: radial-gradient(2px 2px #00d4ff, #000000 2px); /* Puntos azul cian */
   background-size: 50px 50px;
   opacity: 0.3;
   z-index: -3;
@@ -46,7 +46,7 @@ code, .terminal {
 }
 
 .stars2 {
-  background-image: radial-gradient(1px 1px #e63946, #000000 1px);
+  background-image: radial-gradient(1px 1px #8a2be2, #000000 1px); /* Puntos morado brillante */
   background-size: 30px 30px;
   opacity: 0.2;
   z-index: -4;
@@ -61,11 +61,11 @@ code, .terminal {
 /* === HERO SECTION === */
 .hero {
   height: 100vh;
-  background: radial-gradient(ellipse at center, #3a0000 0%, #000000 70%);
+  background: radial-gradient(ellipse at center, #2a004d 0%, #000000 70%); /* Gradiente morado oscuro a negro */
   background-image: 
-    radial-gradient(circle at 20% 30%, rgba(193, 18, 31, 0.4) 0%, transparent 30%),
-    radial-gradient(circle at 80% 70%, rgba(244, 140, 6, 0.3) 0%, transparent 30%),
-    linear-gradient(135deg, #8a0f0f 0%, #4a0505 50%, #000000 100%);
+    radial-gradient(circle at 20% 30%, rgba(138, 43, 226, 0.4) 0%, transparent 30%), /* Morado */
+    radial-gradient(circle at 80% 70%, rgba(0, 212, 255, 0.3) 0%, transparent 30%), /* Azul cian */
+    linear-gradient(135deg, #4b0082 0%, #2a004d 50%, #000000 100%); /* Morado a negro */
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
   display: flex;
@@ -91,24 +91,24 @@ code, .terminal {
   animation: fadeInUp 1.5s forwards;
 }
 
-/* Logo con brillo rojo */
+/* Logo con brillo morado-azul */
 .logo-text {
   font-size: 4rem;
   margin-bottom: 1rem;
   letter-spacing: 1px;
   color: #ffffff;
-  text-shadow: 0 0 20px rgba(244, 140, 6, 0.6);
-  animation: neonGlowRed 3s ease-in-out infinite alternate;
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.6); /* Brillo azul cian */
+  animation: neonGlowPurple 3s ease-in-out infinite alternate;
 }
 
-@keyframes neonGlowRed {
-  0% { text-shadow: 0 0 10px rgba(244, 140, 6, 0.8), 0 0 20px rgba(230, 57, 70, 0.4); }
-  100% { text-shadow: 0 0 20px rgba(244, 140, 6, 1), 0 0 30px rgba(230, 57, 70, 0.7); }
+@keyframes neonGlowPurple {
+  0% { text-shadow: 0 0 10px rgba(0, 212, 255, 0.8), 0 0 20px rgba(138, 43, 226, 0.4); } /* Azul y morado */
+  100% { text-shadow: 0 0 20px rgba(0, 212, 255, 1), 0 0 30px rgba(138, 43, 226, 0.7); }
 }
 
 .tagline {
   font-size: 1.6rem;
-  color: #ffadad;
+  color: #b3a1ff; /* Morado claro */
   margin: 1.5rem 0;
   font-weight: 300;
   letter-spacing: 0.5px;
@@ -125,7 +125,7 @@ code, .terminal {
 .btn-primary,
 .btn-download-small {
   display: inline-block;
-  background: linear-gradient(45deg, #c1121f, #e63946, #f48c06);
+  background: linear-gradient(45deg, #4b0082, #8a2be2, #00d4ff); /* Gradiente morado a azul cian */
   color: white;
   font-weight: 600;
   border: none;
@@ -134,7 +134,7 @@ code, .terminal {
   text-decoration: none;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(230, 57, 70, 0.5);
+  box-shadow: 0 4px 15px rgba(138, 43, 226, 0.5); /* Sombra morada */
 }
 
 .btn-primary {
@@ -146,7 +146,7 @@ code, .terminal {
 
 .btn-primary:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(230, 57, 70, 0.8);
+  box-shadow: 0 10px 30px rgba(138, 43, 226, 0.8); /* Sombra morada más intensa */
 }
 
 .pulse-glow {
@@ -154,8 +154,8 @@ code, .terminal {
 }
 
 @keyframes pulseLava {
-  0%, 100% { box-shadow: 0 0 15px rgba(230, 57, 70, 0.5), 0 0 30px rgba(244, 140, 6, 0.4); }
-  50% { box-shadow: 0 0 25px rgba(230, 57, 70, 0.8), 0 0 40px rgba(244, 140, 6, 0.6); }
+  0%, 100% { box-shadow: 0 0 15px rgba(138, 43, 226, 0.5), 0 0 30px rgba(0, 212, 255, 0.4); } /* Morado y azul */
+  50% { box-shadow: 0 0 25px rgba(138, 43, 226, 0.8), 0 0 40px rgba(0, 212, 255, 0.6); }
 }
 
 /* === SECCIONES === */
@@ -164,14 +164,14 @@ code, .terminal {
   text-align: center;
   margin-bottom: 1.5rem;
   color: #ffffff;
-  text-shadow: 0 0 15px rgba(244, 140, 6, 0.4);
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.4); /* Brillo azul cian */
 }
 
 .editions-subtitle,
 .community-subtitle {
   text-align: center;
   font-size: 1.2rem;
-  color: #dda0a0;
+  color: #b3a1ff; /* Morado claro */
   margin-bottom: 3rem;
   max-width: 700px;
   margin-left: auto;
@@ -181,7 +181,7 @@ code, .terminal {
 /* === FEATURES === */
 .features {
   padding: 6rem 2rem;
-  background: #1a0000;
+  background: #0d001a; /* Fondo morado muy oscuro */
 }
 
 .features-grid {
@@ -193,11 +193,11 @@ code, .terminal {
 }
 
 .feature-card {
-  background: rgba(193, 18, 31, 0.1);
+  background: rgba(138, 43, 226, 0.1); /* Fondo morado translúcido */
   padding: 2.5rem;
   border-radius: 20px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(230, 57, 70, 0.3);
+  border: 1px solid rgba(138, 43, 226, 0.3); /* Borde morado */
   transition: all 0.4s ease;
   text-align: center;
   opacity: 0;
@@ -212,9 +212,9 @@ code, .terminal {
 
 .glow-icon {
   font-size: 2.8rem;
-  color: #f48c06;
+  color: #00d4ff; /* Azul cian */
   margin-bottom: 1.2rem;
-  text-shadow: 0 0 15px rgba(244, 140, 6, 0.6);
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.6); /* Brillo azul */
 }
 
 /* === EDITIONS === */
@@ -233,9 +233,9 @@ code, .terminal {
 }
 
 .edition-card {
-  background: rgba(193, 18, 31, 0.1);
+  background: rgba(138, 43, 226, 0.1); /* Fondo morado translúcido */
   border-radius: 16px;
-  border: 1px solid rgba(230, 57, 70, 0.3);
+  border: 1px solid rgba(138, 43, 226, 0.3); /* Borde morado */
   padding: 1.5rem;
   width: 300px;
   text-align: center;
@@ -283,7 +283,7 @@ code, .terminal {
 }
 
 .nav-btn.active {
-  background: #f48c06;
+  background: #00d4ff; /* Azul cian */
 }
 
 .btn-download-small {
@@ -295,13 +295,13 @@ code, .terminal {
 
 .btn-download-small:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(230, 57, 70, 0.7);
+  box-shadow: 0 8px 20px rgba(138, 43, 226, 0.7); /* Sombra morada */
 }
 
 /* === COMMUNITY === */
 .community {
   padding: 6rem 2rem;
-  background: linear-gradient(135deg, #1a0000, #3a0000, #000000);
+  background: linear-gradient(135deg, #0d001a, #2a004d, #000000); /* Gradiente morado oscuro */
   text-align: center;
   position: relative;
 }
@@ -313,7 +313,7 @@ code, .terminal {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f48c06' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300d4ff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); /* Puntos azul cian */
   opacity: 0.2;
 }
 
@@ -326,7 +326,7 @@ code, .terminal {
 }
 
 .glow-link {
-  color: #ffadad;
+  color: #b3a1ff; /* Morado claro */
   font-size: 1.3rem;
   text-decoration: none;
   display: flex;
@@ -337,19 +337,19 @@ code, .terminal {
 }
 
 .glow-link:hover {
-  color: #f48c06;
+  color: #00d4ff; /* Azul cian */
   transform: translateY(-4px);
-  text-shadow: 0 0 15px rgba(244, 140, 6, 0.5);
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.5); /* Brillo azul */
 }
 
 /* === FOOTER === */
 footer {
   background: #000000;
-  color: #aa7777;
+  color: #8a80c2; /* Morado claro apagado */
   text-align: center;
   padding: 2.5rem;
   font-size: 0.95rem;
-  border-top: 1px solid rgba(230, 57, 70, 0.2);
+  border-top: 1px solid rgba(138, 43, 226, 0.2); /* Borde morado */
 }
 
 footer p {
