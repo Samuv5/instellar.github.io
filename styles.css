@@ -1,4 +1,4 @@
-/* styles.css - Estilo morado y púrpura galáctico para Instellar OS con alineación corregida */
+/* styles.css - Estilo morado y púrpura galáctico con nuevos tonos y alineación corregida */
 
 :root {
   --galaxy-dark: #0f0c29;
@@ -10,6 +10,18 @@
   --starlight: #e0c8ff;
   --cosmic-white: #ffffff;
   --cosmic-shadow: rgba(114, 9, 183, 0.3);
+
+  /* Nuevos tonos */
+  --thistle: #dec9e9ff;
+  --thistle-2: #dac3e8ff;
+  --wisteria: #d2b7e5ff;
+  --wisteria-2: #c19ee0ff;
+  --lavender-floral: #b185dbff;
+  --amethyst: #a06cd5ff;
+  --amethyst-2: #9163cbff;
+  --royal-purple: #815ac0ff;
+  --royal-purple-2: #7251b5ff;
+  --royal-purple-3: #6247aaff;
 }
 
 body {
@@ -521,4 +533,77 @@ a {
 
 .install-guide a:hover {
   text-shadow: 0 0 10px var(--vibrant-purple);
+}
+
+/* Nuevos estilos para tarjetas con tonos variados */
+.feature-card:nth-child(1) {
+  background: rgba(114, 9, 183, 0.1);
+  border: 1px solid var(--cosmic-shadow);
+}
+
+.feature-card:nth-child(2) {
+  background: rgba(160, 108, 213, 0.1);
+  border: 1px solid var(--amethyst);
+}
+
+.feature-card:nth-child(3) {
+  background: rgba(145, 99, 203, 0.1);
+  border: 1px solid var(--amethyst-2);
+}
+
+.feature-card:nth-child(4) {
+  background: rgba(129, 90, 192, 0.1);
+  border: 1px solid var(--royal-purple);
+}
+
+.feature-card:nth-child(5) {
+  background: rgba(113, 81, 181, 0.1);
+  border: 1px solid var(--royal-purple-2);
+}
+
+/* Nuevos estilos para ediciones con tonos variados */
+.edition-card:nth-child(1) {
+  background: rgba(114, 9, 183, 0.1);
+  border: 1px solid var(--cosmic-shadow);
+}
+
+.edition-card:nth-child(2) {
+  background: rgba(160, 108, 213, 0.1);
+  border: 1px solid var(--amethyst);
+}
+
+.edition-card:nth-child(3) {
+  background: rgba(145, 99, 203, 0.1);
+  border: 1px solid var(--amethyst-2);
+}
+
+.edition-card:nth-child(4) {
+  background: rgba(129, 90, 192, 0.1);
+  border: 1px solid var(--royal-purple);
+}
+
+/* Nuevos estilos para hover con tonos variados */
+.feature-card:hover {
+  background: rgba(114, 9, 183, 0.2);
+  box-shadow: 0 20px 40px var(--cosmic-shadow);
+}
+
+.feature-card:nth-child(2):hover {
+  background: rgba(160, 108, 213, 0.2);
+  box-shadow: 0 20px 40px var(--amethyst);
+}
+
+.feature-card:nth-child(3):hover {
+  background: rgba(145, 99, 203, 0.2);
+  box-shadow: 0 20px 40px var(--amethyst-2);
+}
+
+.feature-card:nth-child(4):hover {
+  background: rgba(129, 90, 192, 0.2);
+  box-shadow: 0 20px 40px var(--royal-purple);
+}
+
+.feature-card:nth-child(5):hover {
+  background: rgba(113, 81, 181, 0.2);
+  box-shadow: 0 20px 40px var(--royal-purple-2);
 }
