@@ -1,4 +1,4 @@
-/* styles.css - Estilo morado y púrpura galáctico para Instellar OS */
+/* styles.css - Estilo morado y púrpura galáctico para Instellar OS con alineación corregida */
 
 :root {
   --galaxy-dark: #0f0c29;
@@ -18,6 +18,7 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
 /* Fondo de estrellas animado */
@@ -49,6 +50,11 @@ body {
   padding: 10rem 1rem;
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero::before {
@@ -68,6 +74,7 @@ body {
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  text-align: center;
 }
 
 .logo-text {
@@ -108,6 +115,8 @@ body {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .btn-primary::before {
@@ -138,12 +147,13 @@ body {
 .section-title {
   font-size: 2.8rem;
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
   color: var(--cosmic-white);
   text-shadow: 0 0 15px var(--cosmic-shadow);
   background: linear-gradient(90deg, var(--starlight), var(--galaxy-accent), var(--vibrant-purple));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  padding: 0 1rem;
 }
 
 .features {
@@ -157,6 +167,7 @@ body {
   gap: 2.5rem;
   max-width: 1200px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .feature-card {
@@ -169,6 +180,9 @@ body {
   text-align: center;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .feature-card::before {
@@ -228,6 +242,9 @@ body {
   transition: all 0.6s ease;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .edition-card::before {
@@ -261,6 +278,7 @@ body {
   overflow: hidden;
   text-align: center;
   background: linear-gradient(135deg, var(--vibrant-purple), var(--light-purple));
+  width: 100%;
 }
 
 .edition-header h3 {
@@ -287,6 +305,8 @@ body {
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 600px;
 }
 
 .carousel img {
@@ -332,6 +352,7 @@ body {
   transition: all 0.3s ease;
   text-decoration: none;
   box-shadow: 0 4px 15px var(--cosmic-shadow);
+  margin-top: 1rem;
 }
 
 .btn-download-small:hover {
@@ -389,7 +410,7 @@ footer p {
 .compare-table {
   width: 100%;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto 3rem;
   border-collapse: collapse;
   background: rgba(114, 9, 183, 0.15);
   border-radius: 16px;
@@ -414,4 +435,30 @@ footer p {
 
 .compare-table tr:hover {
   background: rgba(114, 9, 183, 0.1);
+}
+
+/* Ajustes generales de alineación */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2, h3, p {
+  margin: 0 0 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Ajustes específicos para la tabla de comparación */
+#editions + table {
+  margin-top: 2rem;
 }
