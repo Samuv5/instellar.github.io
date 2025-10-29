@@ -49,6 +49,19 @@ h3 {
   margin-bottom: 0.8rem;
 }
 
+/* Mejora de íconos en la tabla */
+.compare-table .fas {
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+.compare-table td i.fas.fa-check-circle {
+  color: #a68ef0;
+}
+
+.compare-table td i.fas.fa-times-circle {
+  color: #ff5757;
+}
 /* Hero Section */
 .hero {
   height: 100vh;
@@ -297,4 +310,5 @@ h3 {
 
 .comparison-table tr:hover {
   background: rgba(123, 98, 217, 0.1);
+
 }
